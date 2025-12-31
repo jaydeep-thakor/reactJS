@@ -1,0 +1,11 @@
+two ways to call function in jsx
+<App/>
+App()
+
+
+empty tags
+fragments
+
+
+atomic
+feature base
