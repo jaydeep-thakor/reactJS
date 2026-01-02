@@ -9,3 +9,8 @@ fragments
 
 atomic
 feature base
+
+
+session storage
+local storage
+
