@@ -29,7 +29,24 @@ const App = () => {
 
   // to clear all the things
   // localStorage.clear();
-  
+
+  const myDetails = {
+    name: "Jaydeep",
+        role: "Front-End Developer",
+        location: "Gandhinagar",
+        skills: ["HTML", "CSS", "JavaScript", "React"]
+  }
+
+// Before storing an object in localStorage, it must be converted into a string, because localStorage can store only text data.
+// JSON.stringify() is used to convert the JavaScript object into a string format so it can be saved properly.
+  localStorage.setItem("myDetails",JSON.stringify(myDetails))
+
+//   When data is retrieved from localStorage, it is received as a string.
+// JSON.parse() is used to convert this string back into a JavaScript object so the data can be accessed and used normally.
+  let myData = JSON.parse(localStorage.getItem("myDetails"))
+console.log(myData);
+
+
 
   return (
     <div>App</div>
