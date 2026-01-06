@@ -20,7 +20,7 @@ const App = () => {
     printResponse = imgData.map((value, index)=>{
     return (
       <div className='bg-white' key={index}>
-        <img className='h-[200px] object-cover w-full' src={value.download_url} alt="" />
+        <img className='h-50 object-cover w-full' src={value.download_url} alt="" />
       </div>
     )
   })
