@@ -11,24 +11,28 @@ const App = () => {
     return num * 2;
   }
 
-  useEffect(() => {
-    expensiveTask();
-  }, [count])
+  const doubleValue = useMemo(() => {
+    return expensiveTask(input);
+  }, [input])
 
   return (
     <div>
 
       <h1>
-      count value = {count}
+        count value = {count}
       </h1>
       <button onClick={() => setCount(count + 1)}>increment</button>
 
+      <br />
+      <br />
 
-
-      <input type="number" onChange={(e)=> setInput(e.target.value)}/>
+      <input type="number" value={input} onChange={(e) => setInput(e.target.value)} />
 
       <h1>
-      input value = {input}
+        input value = {input}
+      </h1>
+      <h1>
+        double value (memoized) = {doubleValue}
       </h1>
 
     </div>
